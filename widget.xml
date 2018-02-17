@@ -1,0 +1,20 @@
+<b:widget id='LinkList101' locked='false' title='Secciones' type='LinkList' version='1'>
+   <b:includable id='main'>
+      <b:loop values='data:links' var='i'>
+         <div class='widget'>
+            <h2><data:i.name/></h2>
+            <div class='widget-content'>
+               <div class='wjs-sections' expr:data-wjslabel='data:i.target'>
+                  <p class='wjs-infoItems'><b:eval expr='data:blog.isPrivateBlog ? "No disponible en blogs privado" : "Cargando"'/></p>
+               </div><!-- .wjs-sections -->
+            </div><!-- .widget-content -->
+         </div><!-- .widget -->
+      </b:loop>
+      <b:with value='{postNum: "6", imageSize: "w300-h225-c", imageDefault: "https://i.imgur.com/6RxzlUm.png"}' var='options'>
+         <script>//<![CDATA[
+         //! Mini templating exclusivo de bling.js y zkreations.com | @copyright José Gregorio Materán (fb.com/JGMateran) | Editado por Daniel Abel (fb.com/danieI.abel)
+         !function(){function t(){}function e(t,e){for(var i=0;i<t.length&&!1!==e.call(t[i],i,t[i]);i++);}function i(t){return"[object Array]"===l.call(t)}function n(t,r){var a="";return i(r)?e(r,function(e,i){a+=n(t,i)}):a=t.replace(/{([\s\S]+?)}/g,function(t,e){return r[e.trim()]}),a}var r=1,a={},l=a.toString,c=document.URL,o=/\/label\//.test(c)?"/-/"+c.match(/\/label\/[^?^]*/)[0].substring(7):"";t.f={},/*]]>*/t.h="<data:blog.homepageUrl.canonical/>",/*<![CDATA[*/t.b=['<div class="wjs-card"><div class="wjs-card__content"><a class="wjs-card__image" href="{url}"><img alt="{title}" src="{image}"/></a><div class="wjs-card__data"><h2 class="wjs-card__title"><a href="{url}">{title}</a></h2><time class="wjs-card__time" datetime="{timeISO}">{time}</time></div></div></div>'].join(""),/*]]>*/t.c={img:"<data:options.imageDefault/>",results:<data:options.postNum/>,imgSize:"<data:options.imageSize/>",/*<![CDATA[*/word:"wjs-sections",attr:"data-wjslabel"},e(document.querySelectorAll("."+t.c.word),function(i,a){var l,i="c"+r++,c=document.createElement("script"),u=t.h+"feeds/posts/default/-/"+a.getAttribute(t.c.attr);u+=o+"?alt=json-in-script&callback=zkreations.f."+i,(l=t.c.results)&&(u+="&max-results="+l),c.src=u,t.f[i]=function(i){var r=[];e(i.feed.entry,function(e,i){r.push({image:(i.media$thumbnail ? i.media$thumbnail.url : t.c.img).replace(/s72-c/,t.c.imgSize),title:i.title.$t,time:(new Date(i.published.$t)).toLocaleDateString("es-ES",{month:"long",day:"2-digit"}),timeISO:i.published.$t,url:function(){for(var t,e=0;t=i.link[e++];)if("alternate"===t.rel)return t.href}()})}),a.innerHTML=n(t.b,r)},document.body.appendChild(c)}),window.zkreations=t}();
+         //]]></script>
+      </b:with>
+   </b:includable>
+</b:widget>
