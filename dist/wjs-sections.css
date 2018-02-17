@@ -1,0 +1,28 @@
+/*!
+* Widget: Wjs-Sections v1.0.0
+* by zkreations
+*/#LinkList101,.widget#LinkList101{background:0 0;margin:0;padding:0;position:relative;box-shadow:0 0 transparent;outline:0;border:0;display:block}.wjs-infoItems{margin-left:.5em;margin-right:.5em;padding:1.5em;width:100%;border-radius:3px;font-weight:500}.wjs-sections{font-size:14px;margin-left:-.5em;margin-right:-.5em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:start;-ms-flex-wrap:wrap;flex-wrap:wrap}.wjs-card{padding-right:.5em;padding-left:.5em;padding-bottom:1em;width:100%}@media (min-width:576px){.wjs-card{width:50%}}@media (min-width:768px){.wjs-card{width:33.333333%}}.wjs-card__content{overflow:hidden}.wjs-card__time{padding-top:.75em;display:block;font-weight:500}.wjs-card__image{overflow:hidden;display:block;border-radius:4px 4px 0 0;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0)}.wjs-card__image img{width:100%;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:scale(1) rotate(0) translateZ(0);transform:scale(1) rotate(0) translateZ(0)}.wjs-card__image:hover img{-webkit-transform:scale(1.05) rotate(-2deg) translateZ(0);transform:scale(1.05) rotate(-2deg) translateZ(0)}
+/*
+=> Personalizacion
+*/
+.wjs-card__content {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.04), 0 1px 5px 0 rgba(0,0,0,.05), 0 2px 1px -2px rgba(0,0,0,.2); /*=> Sombra*/
+    border-radius: 3px; /*=> Bordes redondeados*/
+    background-color: #fff; /*=> Color de fondo*/
+}
+.wjs-card__data {
+    padding: 1.4em; /*=> Relleno*/
+}
+.wjs-card__title {
+    font-size: 1.2em; /*=> Tamaño de los titulos*/
+}
+.wjs-card__title a {
+    color: rgba(0, 0, 0, 0.75); /*=> Color de los titulos*/
+}
+.wjs-card__time {
+    color: rgba(0, 0, 0, 0.4); /*=> Color de la fecha*/
+}
+.wjs-infoItems{
+    background-color:#263238; /*=> Color de fondo del aviso*/
+    color:#fff; /*=> Color de texto del aviso*/
+}
