@@ -6,25 +6,22 @@
 
 ## Instalación
 
-Aloja el archivo `wjs-sections.min.css` e incluir arriba de `</head>`.
-
-```html
-<link rel="stylesheet" href="dist/wjs-sections.min.css"/>
-```
-
-Si no puedes alojar, prueba cargando los estilos desde una cdn proporcionada por rawgit:
-
-```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/zkreations/wjs-sections/master/dist/wjs-sections.min.css"/>
-```
-
-## Crear widget
-
-Incluye el contenido de widget.xml dentro de alguna etiqueta `<b:section>`. La seccion escogida debe pertenecer al Blog o estar relacionada a las entradas del blog, de lo contrario, el widget presentará fallas gráficas.
+Incluye el contenido de widget.xml arriba de `<b:widget id='Blog1'>`.
 
 ## Modo de uso
 
 Desde Diseño, edita el widget Whale Sections y agrega elementos a la lista, el primer campo corresponde al **nombre de la seccion**, el segundo campo debe contener el **nombre de la etiqueta**.
+
+## Opciones
+
+| Propiedad    | Tipo |  Valor |
+| ------------ | ---- | ------------------------------------------ |
+| `homeUrl`   | string | Enlace de la página principal |
+| `image`      | image | Url de la imagen por defecto. Se usa cuando no existen imágenes en el post |
+| `localeDate`     | string | Idioma y localidad |
+| `snippet`    | number | Cantidad de texto para el resumen |
+| `imgSize`    | string | Parametros para cambiar el tamaño de las imágenes |
+| `className`  | var | Clase del contenedor detonante |
 
 ## Licencia
 

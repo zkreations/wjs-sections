@@ -1,0 +1,92 @@
+/*!
+ * wjs-section v2.1.0
+ * Copyright 2018 zkreations
+ * Daniel Abel M. (fb.com/danieI.abel)
+ * Licensed under MIT (github.com/zkreations/wjs-sections/blob/master/LICENSE)
+ */
+/*! Core (No modificar) {{*/
+.widget#LinkList201{
+   background: none;
+   margin:0;
+   padding:0;
+   box-shadow: none;
+   outline:0;
+   border:0;
+}
+.wjs-section__more {display: inline-block;}
+.stns-title, .stns-image, .stns-image img {display: block;}
+.stns-content {overflow: hidden}
+.wjs-section {
+   display: flex;
+   flex: 1 0 100%;
+   flex-wrap: wrap;
+   font-size: 14px;
+   margin-top: calc(var(--wjs-gutter-y) * -1);
+   margin-left: calc(var(--wjs-gutter-x) / -2);
+   margin-right: calc(var(--wjs-gutter-x) / -2);
+}
+.stns-alert,
+.stns-card {
+   flex-shrink: 0;
+   width: 100%;
+   max-width: 100%;
+   flex: 0 0 auto;
+   padding-right: calc(var(--wjs-gutter-x) / 2);
+   padding-left: calc(var(--wjs-gutter-x) / 2);
+   margin-top: var(--wjs-gutter-y);
+}
+@media (min-width:376px) {.stns-card {width: 50%;}}
+@media (min-width:576px) {
+   .stns-card {width: 33.333333%}
+   .wjs-section {font-size: 16px;}
+}
+/*! Personalización */
+/* Estructura
+-----------------------------------------*/
+.wjs-section {
+   --wjs-gutter-x: 1rem; /* Separacion orizontal */
+   --wjs-gutter-y: 1rem; /* Separacion vertical */
+}
+/* Cuerpo
+-----------------------------------------*/
+.stns-content {
+   box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.25); /* sombra */
+   border-radius: 4px; /* bordes redondeados */
+}
+/* Contenedor de datos
+-----------------------------------------*/
+.stns-meta {
+   padding: 1.2em; /* relleno */
+   background-color: #fff; /* color de fondo */
+}
+/* Titulo
+-----------------------------------------*/
+.stns-title {
+   font-size: 1em; /* tamaño del título */
+   margin-bottom: .25em; /* separación */
+   color: #464646; /* color del titulo */
+   font-weight: 500; /* densidad del texto */
+}
+/* Fecha
+-----------------------------------------*/
+.stns-date {
+   font-size: .9em; /* tamaño del texto */
+   color: #BBBBBB; /* color de la fecha */
+}
+/* Resumen
+-----------------------------------------*/
+.stns-snippet {
+   margin-top: .5em; /* separación */
+   color: #757575; /* color del texto */
+}
+/* Boton "Mostrar todo"
+-------------------------------------*/
+.wjs-section__more {
+   margin-top: 1.5rem; /* Separacion */
+   padding: .8rem 1.5rem; /* relleno */
+   background-color: #f1f1f1; /* color de fondo */
+   font-size: 1em; /* tamaño del texto */
+   font-weight: 500; /* densidad del texto */
+   color: #757575; /* color del texto */
+   border-radius: 4px; /* bordes redondeados */
+}

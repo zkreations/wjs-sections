@@ -1,0 +1,11 @@
+/*
+ wjs-section v2.1.0
+ Copyright 2018 zkreations
+ Developed by José Gregorio (fb.com/JGMateran)
+ Licensed under MIT (github.com/zkreations/wjs-sections/blob/master/LICENSE)
+*/
+var callbacks={},defaults={homeUrl:window.location.protocol+"//"+window.location.hostname,image:"img/no-img-blogger.png",className:".wjs-section",localeDate:"es-ES",snippet:60,imgSize:"w300-h240-c"},section={expReg:/[swh]\d{2,4}(?:-[swh]\d{2,4})?(?:-c)?/,category:null,"max-results":6,template:{"default":'<div class="stns-card"><div class="stns-content"><div class="stns-header"><a class="stns-image" href="URL"><img src="IMG" /></a></div><div class="stns-meta"><a class="stns-title" href="URL">TITLE</a><time class="stns-date">TIME</time><p class="stns-snippet">SNIPPET</p></div></div></div>',
+empty:'<p class="stns-alert">No se han encontrado entradas</p>'}};function forEach(c,b){var a,d;for(a=0;(d=c[a++])&&!1!==b.call(d,a,d););return c}function getCurrentData(c){var b,a,d={};for(b in section)(a=c.getAttribute("data-"+b))&&(d[b]=a);return d}function temp(c,b){for(var a in b)c=c.replace(new RegExp(a,"g"),b[a]);return c}
+function getLabel(c,b){var a,d=b.category.replace(/[^A-Z0-9]/ig,""),n=document.createElement("script"),p=defaults.homeUrl+"/feeds/posts/default?alt=json-in-script&callback=callbacks."+d;callbacks[d]=function(k){var e,l="",q=k.feed.entry;if(q)for(k=0;e=q[k++];){var f=e.content,h=e.summary;f=f?f.$t:h.$t;h=e.media$thumbnail;var g=document.createElement("div");g.innerHTML=f;g=g.querySelector("img");l+=temp(b.template,{IMG:(h?h.url:g?g.src:defaults.image).replace(section.expReg,defaults.imgSize),TITLE:e.title.$t,
+TIME:(new Date(e.published.$t)).toLocaleDateString(defaults.localeDate,{month:"long",day:"2-digit"}),SNIPPET:f.replace(/<[^>]*>?/g,"").substring(0,defaults.snippet)+"...",URL:function(){var r,m;for(r=0;m=e.link[r++];)if("alternate"===m.rel)return m.href}})}else l+=section.template.empty;c.innerHTML=l};for(a in b)"template"!==a&&(p+="&"+a+"="+b[a]);n.src=p;document.body.appendChild(n)}
+forEach(document.querySelectorAll(defaults.className),function(c,b){var a=getCurrentData(b);a.category&&(a["max-results"]||(a["max-results"]=section["max-results"]),a.template=section.template["default"],getLabel(b,a))});
