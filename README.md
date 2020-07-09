@@ -21,7 +21,7 @@ Desde Diseño, edita el widget Whale Sections y agrega elementos a la lista, el 
 | `localeDate`     | string | Idioma y localidad |
 | `snippet`    | number | Cantidad de texto para el resumen |
 | `imgSize`    | string | Parametros para cambiar el tamaño de las imágenes |
-| `className`  | var | Clase del contenedor detonante |
+| `className`  | string | Clase del contenedor detonante |
 
 ## Licencia
 
